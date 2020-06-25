@@ -46,6 +46,28 @@ No React Native não temos ID ou ClassName, aqui nós vamos utilizar **style={st
 
 No React Native não temos herança de estilos, então não adiantar eu colocar uma color: #fff dentro do container e esperar que o texto fique branco. Então preciso colocar um estilo especifico para cada tag.
 
+### Listas no React Native
+No React Native temos algumas configurações para **mostrar listas** (após o meu map, por ex). Caso a minha lista for muito grande, vou precisar de um **scroll** para conseguir visualizar todo o meu conteúdo.
+
+Para isso eu posso importar a **ScrollView** e substituir pela minha **View** (nesse caso eu não posso usar justify e nem align). Mas, quando estamos utilizando especificamente com **listas** no lugar da **View** vamos usar o **FlatList** que é um componente **performático** para listas dentro do React Native.
+
+```jsx
+<FlatList 
+     style={styles.container}
+     data={projects} 
+     keyExtractor={project => project.id} 
+     renderItem={({ item: project }) => (
+                <Text style={styles.project}>{project.title}</Text> 
+     )}  
+/>
+```
+
+- **DATA** - recebe a variável que armazena os dados na nossa lista -> precisa ser obrigatoriamente um array
+- **KEYEXTRACTOR** - assim como no map precisamos ter a key, usamos o keyExtractor no React Native - recebe o item do array e retorna o valor único
+- **RENDERITEM** - é uma função que retorna o que precisamos. Ela recebe uma série de propriedades, ex: informações
+
+📎 Não existe diferença visual entre ScrollView e **FlatList**, mas se a lista for muito grande, FlatList vai performar muito melhor pq ela só mostra em tela o que está visível, tudo o que não estiver visível ela não renderiza por debaixo dos panos.  E outras propriedades bem interessantes.
+
 ### Funcionalidades da aplicação
 
 - **`Listar os repositórios da sua API`**: Deve ser capaz de criar uma lista de todos os repositórios que estão cadastrados na sua API com os campos **title**, **techs** e número de curtidas seguindo o padrão `${repository.likes} curtidas`, apenas alterando o número para ser dinâmico.
