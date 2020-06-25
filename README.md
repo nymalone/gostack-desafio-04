@@ -6,10 +6,45 @@
 #### If you need support with the content, go to my [Notion notes](https://www.notion.so/S01-Mobile-com-React-Native-7ffb8834ea074da8a18c1d96173c1299)
   
 ## 🚀 Desafio 03 
-
+O objetivo deste desafio é colocar em prática os principais conceitos de React Native fazendo busca na api desenvolvida no [desafio 1](https://github.com/nymalone/gostack-desafio-01)
 
 ##  🤓 Conceitos importantes
-### ...
+### Principais diferenças com o ReactJS
+Não vamos utilizar elementos do HTML. Temos que utilizar componentes que são exportados diretamente do pacote React Native, ex: **View** - div, footer, header, main, aside, section.
+
+Os elementos do React Native não possuem valor semântico (significado), todos eles são usados de forma abstrata. Ex: **Text -** p, span, strong, h1, h2, h3...
+
+Não possuem estilização própria. Ex h1 font-size 32px. **Tudo** precisa ser feito através de **CSS**.
+
+Não vou criar arquivo **.css** a parte de css é feito dentro do código JS.
+
+```jsx
+const styles = StyleSheet.create({
+    container: {
+			flex: 1, 
+        backgroundColor: "#7159c1",
+				justifyContent: "center",
+        alignItems: "center"
+    },
+		title: {
+        color: "#fff",
+        fontSize: 20,
+        fontWeight: "bold",
+    },
+});
+```
+
+Todos componentes possuem por padrão **"display: flex"**  (por isso o flex 1 para ocupar a tela toda)
+
+No React Native não temos ID ou ClassName, aqui nós vamos utilizar **style={styles.container}** 
+
+```jsx
+<View style={styles.container}>;
+	<Text style={styles.title}> Hello GoStack </Text>
+</View> 
+```
+
+No React Native não temos herança de estilos, então não adiantar eu colocar uma color: #fff dentro do container e esperar que o texto fique branco. Então preciso colocar um estilo especifico para cada tag.
 
 ### Funcionalidades da aplicação
 
