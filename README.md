@@ -5,7 +5,7 @@
 
 #### If you need support with the content, go to my [Notion notes](https://www.notion.so/S01-Mobile-com-React-Native-7ffb8834ea074da8a18c1d96173c1299)
   
-## 🚀 Desafio 03 
+## 🚀 Desafio 04 
 O objetivo deste desafio é colocar em prática os principais conceitos de React Native fazendo busca na api desenvolvida no [desafio 1](https://github.com/nymalone/gostack-desafio-01)
 
 ##  🤓 Conceitos importantes
