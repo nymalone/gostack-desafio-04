@@ -1,4 +1,8 @@
 ![Screen Shot 2020-06-24 at 14 40 26](https://user-images.githubusercontent.com/54912285/85605620-b59af580-b628-11ea-9c7a-f318a42dbba3.png)
+
+<blockquote align="center">“Sucesso não é o resultado de um jogo, mas o destino de uma jornada”!</blockquote>
+
+
 <h1 align="center">
   🚀 Conceitos React Native 🚀
 </h1>
